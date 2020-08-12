@@ -18,27 +18,57 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "CEO"
-  company = "GenCoin"
-  company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
-  date_end = ""
-  description = """
+  title = "Software Research Intern"
+  company = "Siemens"
+  company_url = "https://new.siemens.com/global/en.html"
+  location = "Bengaluru, India"
+  date_start = "2019-06-17"
+  date_end = "2019-07-26"
+  description = """Created a Deep Neural Network validation, testing pipeline, worked on coverage guided fuzzing.
   Responsibilities include:
-  
-  * Analysing
-  * Modelling
+
+  * Testing
   * Deploying
   """
 
 [[experience]]
-  title = "Professor"
-  company = "University X"
-  company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  title = "Software Research Intern"
+  company = "Siemens"
+  company_url = "https://new.siemens.com/global/en.html"
+  location = "Bengaluru, India"
+  date_start = "2018-12-03"
+  date_end = "2019-02-15"
+  description = """Created a Style Transfer Learning Pipeline, worked on active learning.
+  Responsibilities include:
+
+  * Optimising GPU Usage
+  * Active Learning
+  * Deploying
+  """
+
+[[experience]]
+  title = "Intern - Cloud Native Engineering (R&D)"
+  company = "Semut"
+  company_url = "https://semut.io"
+  location = "Bengaluru, India"
+  date_start = "2020-03-30"
+  date_end = "2020-04-30"
+  description = """Working on Cluster Efficiency, learning cloud computing principles."""
+
+[[experience]]
+  title = "Co-Founder and CEO"
+  company = "Furry Tails"
+  company_url = "https://furrytails.in"
+  location = "Bengaluru, India"
+  date_start = "2020-06-01"
+  description = """Undergoing a shaky rollercoaster ride!"""
+
+[[experience]]
+  title = "Software Engineer"
+  company = "Semut"
+  company_url = "https://semut.io"
+  location = "Singapore"
+  date_start = "2020-07-15"
+  description = """Working on the Ceph Cluster and Cluster Efficiency"""
 
 +++

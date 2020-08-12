@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: Shreyas Bapat
 
 # Username (this should match the folder name)
 authors:
@@ -10,32 +10,27 @@ authors:
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: Software Engineer
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
-  url: ""
+- name: Semut Technologies Pte. Ltd.
+  url: "https://semut.io/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research interests include performance, deep learning. computational astrophysics and distributed systems.
 
 interests:
 - Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Deep Learning
+- Scalability
+- Performance
 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: B.Tech. in Electrical Engineering
+    institution: Indian Institute of Technology Mandi
+    year: 2016-2020
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -44,16 +39,19 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
+  link: "mailto:bapat.shreyas@gmail.com" #'#contact'  # For a direct email link, use "mailto:test@example.org".
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
+  link: https://twitter.com/astroshreyas
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://scholar.google.com/citations?user=ofnI4fEAAAAJ&hl=en
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/shreyasbapat
+- icon: linkedin
+  icon_pack: fab
+  link: https://linkedin.com/in/shreyasbapat
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -61,7 +59,7 @@ social:
 #   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ""
+email: "bapat.shreyas@gmail.com"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
@@ -70,6 +68,8 @@ user_groups:
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Shreyas Bapat is a Software Engineer working in a Cloud Computing Company, Semut. He is a Bachelor of Technology (B.Tech.) from Indian Institute of Technology Mandi where his major was Electrical Engineering and minor was Management. His research interests include deep learning, performance, computational astrophysics and distributed systems. He helped form the Computational Astrophysics group in IIT Mandi, which develops algorithms for solving complex physical/observational problems in Astrophysics and Astronomy and related datasets.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Shreyas has undertaken various kinds of work ranging from cloud computing to deep learning. He is specifically interested to understand how deep learning works and how to make it fast. For that he has worked twice in Research Team of Siemens. He has Co-Founded a Pet Health company called FurryTails, which is in it's early stages of development.
+
+Shreyas also maintains EinsteinPy, is a prominent contributor to poliastro, pytorch-lightning, cluster-api. He is a Managing Member of Python Software Foundation.

@@ -19,33 +19,33 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[item]]
-  organization = "Coursera"
-  organization_url = "https://www.coursera.org"
-  title = "Neural Networks and Deep Learning"
+  organization = "Indian Institute of Technology Mandi"
+  organization_url = "https://iitmandi.ac.in"
+  title = "Foundation Day Award"
   url = ""
-  certificate_url = "https://www.coursera.org"
-  date_start = "2018-10-01"
+  # certificate_url = "https://www.coursera.org"
+  date_start = "2020-02-24"
   date_end = ""
-  description = ""
+  description = "For contributions to STAC and EinsteinPy"
 
 [[item]]
-  organization = "edX"
-  organization_url = "https://www.edx.org"
-  title = "Blockchain Fundamentals"
-  url = "https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals"
-  certificate_url = "https://www.edx.org"
-  date_start = "2018-03-01"
-  date_end = ""
-  description = "Formulated informed blockchain models, hypotheses, and use cases."
-  
-[[item]]
-  organization = "DataCamp"
-  organization_url = "https://www.datacamp.com"
-  title = "Object-Oriented Programming in R: S3 and R6 Course"
+  organization = "7th Inter IIT Tech Meet"
+  organization_url = "https://interiittech.org"
+  title = "Bronze Medal"
   url = ""
-  certificate_url = "https://www.datacamp.com"
-  date_start = "2017-07-01"
-  date_end = "2017-12-21"
-  description = ""
+  # certificate_url = "https://www.coursera.org"
+  date_start = "2019-01-12"
+  date_end = ""
+  description = "For exceptional performance in Star Cluster Identification Hackathon"
+
+[[item]]
+  organization = "8th Inter IIT Tech Meet"
+  organization_url = "https://interiittech.org"
+  title = "Bronze Medal"
+  url = ""
+  # certificate_url = "https://www.coursera.org"
+  date_start = "2019-12-22"
+  date_end = ""
+  description = "For exceptional performance in Route Optimization Algorithm"
 
 +++
