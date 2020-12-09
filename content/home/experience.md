@@ -57,8 +57,8 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Co-Founder and CEO"
-  company = "Furry Tails"
-  company_url = "https://furrytails.in"
+  company = "Furrble"
+  company_url = "https://furrble.com"
   location = "Bengaluru, India"
   date_start = "2020-06-01"
   description = """Undergoing a shaky rollercoaster ride!"""
@@ -69,6 +69,6 @@ date_format = "Jan 2006"
   company_url = "https://semut.io"
   location = "Singapore"
   date_start = "2020-07-15"
-  description = """Working on the Ceph Cluster and Cluster Efficiency"""
+  description = """Working on Storage Orrchestration, Cluster Efficiency and Distributed Machine Learning."""
 
 +++
