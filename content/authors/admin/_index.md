@@ -14,8 +14,8 @@ role: Software Engineer
 
 # Organizations/Affiliations
 organizations:
-- name: Semut Technologies Pte. Ltd.
-  url: "https://semut.io/"
+- name: Shuttl
+  url: "https://shuttl.com"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include performance, deep learning. computational astrophysics and distributed systems.
@@ -68,7 +68,7 @@ user_groups:
 - Visitors
 ---
 
-Shreyas Bapat is a Software Engineer working in Semut.io. He is the part of Storage and AI/ML initiatives in the team. He is a Bachelor of Technology (B.Tech.) from Indian Institute of Technology Mandi where his major was Electrical Engineering and minor was Management. His research interests include deep learning, performance, computational astrophysics and distributed systems. He helped form the Computational Astrophysics group in IIT Mandi, which develops algorithms for solving complex physical/observational problems in Astrophysics and Astronomy and related datasets.
+Shreyas Bapat is a Software Engineer working in Shuttl in the Backend Team. He is a Bachelor of Technology (B.Tech.) from Indian Institute of Technology Mandi where his major was Electrical Engineering and minor was Management. His research interests include deep learning, performance, computational astrophysics and distributed systems. He helped form the Computational Astrophysics group in IIT Mandi, which develops algorithms for solving complex physical/observational problems in Astrophysics and Astronomy and related datasets.
 
 Shreyas has undertaken various kinds of work ranging from cloud computing to deep learning. He is specifically interested to understand how deep learning works and how to make it better. For that he has worked twice in Research Team of Siemens. He has also Co-Founded a Pet/Lifestyle company [Furrble](https://furrble.com), which is in it's early stages of development.
 
