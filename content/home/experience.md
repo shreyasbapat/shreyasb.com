@@ -61,6 +61,7 @@ date_format = "Jan 2006"
   company_url = "https://furrble.com"
   location = "Bengaluru, India"
   date_start = "2020-06-01"
+  date_end = "2021-05-27"
   description = """Undergoing a shaky rollercoaster ride!"""
 
 [[experience]]
@@ -69,6 +70,15 @@ date_format = "Jan 2006"
   company_url = "https://semut.io"
   location = "Singapore"
   date_start = "2020-07-15"
+  date_end = "2021-03-17"
   description = """Working on Storage Orrchestration, Cluster Efficiency and Distributed Machine Learning."""
+  
+[[experience]]
+  title = "Software Engineer"
+  company = "Shuttl"
+  company_url = "https://shuttl.com"
+  location = "Gurugram, India"
+  date_start = "2021-04-12"
+  description = """Working as a Backend Software Engineer for the company."""
 
 +++
