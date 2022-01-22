@@ -79,6 +79,15 @@ date_format = "Jan 2006"
   company_url = "https://shuttl.com"
   location = "Gurugram, India"
   date_start = "2021-04-12"
+  date_end = "2021-07-16"
+  description = """Working as a Backend Software Engineer for the company."""
+  
+[[experience]]
+  title = "Software Engineer"
+  company = "Tekion"
+  company_url = "https://tekion.com"
+  location = "Bengaluru, India"
+  date_start = "2021-07-22"
   description = """Working as a Backend Software Engineer for the company."""
 
 +++
