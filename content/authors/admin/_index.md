@@ -42,7 +42,7 @@ social:
   link: "mailto:bapat.shreyas@gmail.com" #'#contact'  # For a direct email link, use "mailto:test@example.org".
 - icon: twitter
   icon_pack: fab
-  link: https://x.com/shreyab94
+  link: https://x.com/shreyasb94
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=ofnI4fEAAAAJ&hl=en
@@ -70,4 +70,4 @@ user_groups:
 
 Shreyas Bapat is a Senior Software Engineer working in Tekion in the FixedOps Team. He is a Bachelor of Technology (B.Tech.) from Indian Institute of Technology Mandi with a major in Electrical Engineering and minor in Management. His research interests include deep learning, performance, computational astrophysics and distributed systems. He helped form the Computational Astrophysics group in IIT Mandi, which develops algorithms for solving complex physical/observational problems in Astrophysics and Astronomy and related datasets.
 
-Shreyas is a traveller and loves to climb every moountain. He likes to ride his bike and go on long rides.
+Shreyas is a traveller and loves to climb every mountain. He likes to ride his bike on long rides. 
