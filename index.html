@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreyas Bapat</title>
+  <meta name="description" content="Shreyas Bapat — Software Engineer, open source maintainer, and builder. IIT Mandi alumnus." />
+  <meta property="og:title" content="Shreyas Bapat" />
+  <meta property="og:description" content="Software Engineer & Open Source Builder" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@shreyasb94" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --bg2: #111118;
+      --bg3: #18181f;
+      --border: #2a2a35;
+      --text: #e8e8f0;
+      --muted: #8888a0;
+      --accent: #6366f1;
+      --accent2: #818cf8;
+      --accent-glow: rgba(99, 102, 241, 0.15);
+      --green: #34d399;
+      --font: 'Inter', system-ui, sans-serif;
+      --mono: 'JetBrains Mono', 'Fira Code', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent2); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #fff; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 2rem;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: var(--mono);
+      font-size: 0.9rem;
+      color: var(--text);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-logo span { color: var(--accent2); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 6rem 2rem 4rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-inner { width: 100%; }
+
+    .hero-label {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--accent2);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-name {
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #fff 0%, #a0a0c0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-tagline {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--muted);
+      font-weight: 400;
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .hero-tagline strong { color: var(--text); font-weight: 500; }
+
+    .hero-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-primary:hover { background: #5254c4; color: #fff; transform: translateY(-1px); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { color: var(--text); border-color: var(--accent2); transform: translateY(-1px); }
+
+    /* SECTIONS */
+    section {
+      padding: 5rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--accent2);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+      color: var(--text);
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin: 0 auto;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .about-text p:last-child { margin-bottom: 0; }
+
+    .about-text strong { color: var(--text); font-weight: 500; }
+
+    .about-sidebar {}
+
+    .skill-group { margin-bottom: 1.5rem; }
+
+    .skill-group-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      background: var(--bg3);
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    /* EXPERIENCE */
+    .timeline { display: flex; flex-direction: column; gap: 2rem; }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 2rem;
+    }
+
+    .timeline-date {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      padding-top: 0.2rem;
+      text-align: right;
+      line-height: 1.6;
+    }
+
+    .timeline-body {}
+
+    .timeline-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+
+    .timeline-org {
+      font-size: 0.875rem;
+      color: var(--accent2);
+      margin-bottom: 0.6rem;
+    }
+
+    .timeline-desc {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .project-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent);
+      background: var(--bg3);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px var(--accent-glow);
+    }
+
+    .project-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-desc {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 1rem;
+    }
+
+    .project-footer {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: auto;
+    }
+
+    .project-lang {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+    .lang-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #3572A5;
+    }
+
+    .lang-dot.go { background: #00ADD8; }
+    .lang-dot.ts { background: #3178c6; }
+
+    .project-link {
+      margin-left: auto;
+      font-size: 0.75rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .project-link:hover { color: var(--accent2); }
+
+    /* PUBLICATIONS */
+    .pubs-list { display: flex; flex-direction: column; gap: 1.25rem; }
+
+    .pub-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+
+    .pub-card:hover { border-color: var(--accent); }
+
+    .pub-type {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--accent2);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+
+    .pub-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+      line-height: 1.4;
+    }
+
+    .pub-authors {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .pub-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+    .pub-link {
+      font-size: 0.78rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      transition: all 0.2s;
+    }
+
+    .pub-link:hover { border-color: var(--accent2); color: var(--accent2); }
+
+    /* TALKS */
+    .talks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .talk-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      transition: all 0.2s;
+    }
+
+    .talk-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+
+    .talk-venue {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--accent2);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+    }
+
+    .talk-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .contact-text p {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--muted);
+      font-size: 0.875rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+
+    .social-link:last-child { border-bottom: none; }
+    .social-link:hover { color: var(--text); }
+
+    .social-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* SCROLL INDICATOR */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--muted);
+      font-size: 0.7rem;
+      font-family: var(--mono);
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links { gap: 1.25rem; }
+      .nav-links li:not(:last-child):not(:nth-last-child(2)) { display: none; }
+
+      section { padding: 3.5rem 1.25rem; }
+      .hero { padding: 5rem 1.25rem 3rem; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .timeline-item { grid-template-columns: 1fr; gap: 0.25rem; }
+      .timeline-date { text-align: left; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    /* GLOW ACCENTS */
+    .hero::before {
+      content: '';
+      position: fixed;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(99,102,241,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      color: var(--green);
+      background: rgba(52, 211, 153, 0.08);
+      border: 1px solid rgba(52, 211, 153, 0.2);
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+      font-family: var(--mono);
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">shreyas<span>.</span>bapat</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#publications">Research</a></li>
+    <li><a href="#talks">Talks</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero" style="position:relative;">
+  <div class="hero-inner">
+    <div class="status-badge">
+      <div class="status-dot"></div>
+      Available for interesting problems
+    </div>
+    <div class="hero-label">Hello, I'm</div>
+    <h1 class="hero-name">Shreyas Bapat</h1>
+    <p class="hero-tagline">
+      Software engineer who loves <strong>distributed systems</strong>,
+      <strong>open source</strong>, and building things that matter.
+      IIT Mandi alumnus. Currently writing Go and thinking about scale.
+    </p>
+    <div class="hero-links">
+      <a href="#contact" class="btn btn-primary">Get in touch</a>
+      <a href="https://github.com/shreyasbapat" target="_blank" rel="noopener" class="btn btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a href="https://linkedin.com/in/shreyasbapat" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+      <a href="https://thoughts.shreyasb.com" target="_blank" rel="noopener" class="btn btn-ghost">Blog →</a>
+    </div>
+  </div>
+</div>
+
+<div class="divider" style="max-width:900px;margin:0 auto;"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">01 / About</div>
+  <h2>A bit about me</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        I'm Shreyas — a software engineer with a deep curiosity for how systems scale and how
+        open source can change the world. I graduated from <strong>IIT Mandi</strong> with a
+        B.Tech. in Electrical Engineering and a minor in Management.
+      </p>
+      <p>
+        Currently I'm a <strong>Senior Software Engineer at Tekion Corp</strong>, working on the
+        FixedOps team building automotive dealership software. I work primarily with Go and
+        distributed systems at scale.
+      </p>
+      <p>
+        Outside of work I'm passionate about open source. I'm the creator and maintainer of
+        <strong>EinsteinPy</strong> — a Python library for general relativity and gravitational
+        physics — and I helped build the Computational Astrophysics group at IIT Mandi.
+      </p>
+      <p>
+        When not at a keyboard I'm usually on a bike ride, chasing mountain trails, or somewhere
+        in the Himalayas.
+      </p>
+    </div>
+    <div class="about-sidebar">
+      <div class="skill-group">
+        <div class="skill-group-label">Languages</div>
+        <div class="tags">
+          <span class="tag">Go</span>
+          <span class="tag">Python</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Interests</div>
+        <div class="tags">
+          <span class="tag">Distributed Systems</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">Scalability</span>
+          <span class="tag">Open Source</span>
+          <span class="tag">Computational Astrophysics</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Education</div>
+        <div style="font-size:0.85rem; color:var(--muted); line-height:1.6;">
+          <div style="color:var(--text); font-weight:500;">B.Tech. Electrical Engineering</div>
+          <div>IIT Mandi · 2016–2020</div>
+          <div style="margin-top:0.25rem; color:var(--muted); font-size:0.8rem;">Minor in Management</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" style="max-width:900px;margin:0 auto;"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">02 / Experience</div>
+  <h2>Where I've worked</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date">2021 — Present</div>
+      <div class="timeline-body">
+        <div class="timeline-title">Senior Software Engineer</div>
+        <div class="timeline-org">Tekion Corp</div>
+        <div class="timeline-desc">
+          Building the FixedOps platform for automotive dealerships. Working on distributed systems,
+          API design, and backend services in Go at scale.
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">2019 — 2020</div>
+      <div class="timeline-body">
+        <div class="timeline-title">Google Summer of Code Student</div>
+        <div class="timeline-org">OpenAstronomy / Python Software Foundation</div>
+        <div class="timeline-desc">
+          Worked on EinsteinPy under OpenAstronomy — implementing geodesic solvers and symbolic
+          tensor algebra tools for general relativistic calculations.
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">2016 — 2020</div>
+      <div class="timeline-body">
+        <div class="timeline-title">B.Tech. Electrical Engineering</div>
+        <div class="timeline-org">Indian Institute of Technology Mandi</div>
+        <div class="timeline-desc">
+          Founded and led the Computational Astrophysics group. Minor in Management.
+          Represented IIT Mandi at national and international conferences.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" style="max-width:900px;margin:0 auto;"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">03 / Projects</div>
+  <h2>Things I've built</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-icon">⚡</div>
+      <div class="project-name">EinsteinPy</div>
+      <div class="project-desc">
+        An open source Python library for general relativity and gravitational physics.
+        Supports geodesic calculations, tensor algebra, and visualization of spacetime geometries
+        including Schwarzschild, Kerr, and Kerr–Newman metrics.
+      </div>
+      <div class="project-footer">
+        <div class="project-lang">
+          <div class="lang-dot"></div>
+          Python
+        </div>
+        <a href="https://einsteinpy.org" target="_blank" rel="noopener" class="project-link">
+          einsteinpy.org →
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">🏠</div>
+      <div class="project-name">Project HIKO</div>
+      <div class="project-desc">
+        Voice and internet-enabled smart home automation system. Controls home electronics via
+        speech recognition and mobile app, built on low-cost hardware to make smart homes
+        accessible.
+      </div>
+      <div class="project-footer">
+        <div class="project-lang">
+          <div class="lang-dot"></div>
+          Python
+        </div>
+        <a href="https://github.com/shreyasbapat/Projecthiko1.0_Web_Handle" target="_blank" rel="noopener" class="project-link">
+          GitHub →
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">🔭</div>
+      <div class="project-name">Computational Astrophysics Group</div>
+      <div class="project-desc">
+        Co-founded the Computational Astrophysics group at IIT Mandi — a student research
+        collective building algorithms for complex astrophysical simulations and observational
+        datasets.
+      </div>
+      <div class="project-footer">
+        <div class="project-lang">
+          <div class="lang-dot"></div>
+          Python / Julia
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" style="border-style: dashed; opacity: 0.65;">
+      <div class="project-icon">🛠️</div>
+      <div class="project-name">More on GitHub</div>
+      <div class="project-desc">
+        Explore the rest of my open source work — experiments, tools, and side projects across
+        systems programming, astrophysics, and ML.
+      </div>
+      <div class="project-footer">
+        <a href="https://github.com/shreyasbapat" target="_blank" rel="noopener" class="project-link">
+          github.com/shreyasbapat →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" style="max-width:900px;margin:0 auto;"></div>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="section-label">04 / Research</div>
+  <h2>Publications</h2>
+  <div class="pubs-list">
+    <div class="pub-card">
+      <div class="pub-type">Preprint · arXiv 2020</div>
+      <div class="pub-title">EinsteinPy: A Community Python Package for General Relativity</div>
+      <div class="pub-authors">
+        Shreyas Bapat, Ritwik Saha, Bhavya Bhatt, Shilpi Jain, Akshita Jain, Priyanshu Khandelwal
+      </div>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2005.11288" target="_blank" rel="noopener" class="pub-link">arXiv</a>
+        <a href="https://arxiv.org/pdf/2005.11288" target="_blank" rel="noopener" class="pub-link">PDF</a>
+        <a href="https://einsteinpy.org" target="_blank" rel="noopener" class="pub-link">Project</a>
+      </div>
+    </div>
+
+    <div class="pub-card">
+      <div class="pub-type">Journal Paper · IJETSR 2017</div>
+      <div class="pub-title">Project HIKO 1.0 — The Voice &amp; Internet Enabled Smart Home</div>
+      <div class="pub-authors">
+        Vedant Aggarwal, Shreyas Bapat, Nidhika Kadela, Parimal Kumar, Rakshit Matta, Niraj Yadav
+      </div>
+      <div class="pub-links">
+        <a href="http://www.ijetsr.com/images/short_pdf/1497278492_ieted794_ijetsr.pdf" target="_blank" rel="noopener" class="pub-link">PDF</a>
+        <a href="https://github.com/shreyasbapat/Projecthiko1.0_Web_Handle" target="_blank" rel="noopener" class="pub-link">Code</a>
+      </div>
+    </div>
+  </div>
+  <p style="margin-top:1.5rem; font-size:0.85rem; color:var(--muted);">
+    Full profile on
+    <a href="https://scholar.google.com/citations?user=ofnI4fEAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+  </p>
+</section>
+
+<div class="divider" style="max-width:900px;margin:0 auto;"></div>
+
+<!-- TALKS -->
+<section id="talks">
+  <div class="section-label">05 / Speaking</div>
+  <h2>Talks &amp; Presentations</h2>
+  <div class="talks-grid">
+    <div class="talk-card">
+      <div class="talk-venue">SciPy 2020</div>
+      <div class="talk-title">Accelerating the 'slow' Python</div>
+    </div>
+    <div class="talk-card">
+      <div class="talk-venue">PyAstro 2019</div>
+      <div class="talk-title">Python at the speed of light!</div>
+    </div>
+    <div class="talk-card">
+      <div class="talk-venue">PyAstro 2019</div>
+      <div class="talk-title">Poster: EinsteinPy</div>
+    </div>
+    <div class="talk-card">
+      <div class="talk-venue">PyCon India 2018</div>
+      <div class="talk-title">Through Python to the stars</div>
+    </div>
+    <div class="talk-card">
+      <div class="talk-venue">SAGE-SIRT 2020</div>
+      <div class="talk-title">Looking at a Black Hole with Python</div>
+    </div>
+    <div class="talk-card">
+      <div class="talk-venue">SEMUT 2020</div>
+      <div class="talk-title">COVID-19 Dynamics on Career</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" style="max-width:900px;margin:0 auto;"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">06 / Contact</div>
+  <h2>Get in touch</h2>
+  <div class="contact-grid">
+    <div class="contact-text">
+      <p>
+        Whether you want to talk software, open source, or have an interesting problem
+        to work on — my inbox is open. I'm always happy to connect with fellow builders.
+      </p>
+      <a href="mailto:bapat.shreyas@gmail.com" class="btn btn-primary">
+        bapat.shreyas@gmail.com
+      </a>
+    </div>
+    <div class="social-links">
+      <a href="https://github.com/shreyasbapat" target="_blank" rel="noopener" class="social-link">
+        <div class="social-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </div>
+        github.com/shreyasbapat
+      </a>
+      <a href="https://linkedin.com/in/shreyasbapat" target="_blank" rel="noopener" class="social-link">
+        <div class="social-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </div>
+        linkedin.com/in/shreyasbapat
+      </a>
+      <a href="https://x.com/shreyasb94" target="_blank" rel="noopener" class="social-link">
+        <div class="social-icon">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </div>
+        @shreyasb94
+      </a>
+      <a href="https://scholar.google.com/citations?user=ofnI4fEAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link">
+        <div class="social-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 12.015 14.978 11 12 11c-2.978 0-5.548 1.015-6.758 2.769zM12 10a7 7 0 100 14 7 7 0 000-14z"/></svg>
+        </div>
+        Google Scholar
+      </a>
+      <a href="https://thoughts.shreyasb.com" target="_blank" rel="noopener" class="social-link">
+        <div class="social-icon">✍️</div>
+        thoughts.shreyasb.com
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Built with HTML &amp; CSS · &copy; 2024 Shreyas Bapat</p>
+</footer>
+
+</body>
+</html>
